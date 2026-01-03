@@ -22,9 +22,9 @@ jobs:
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v1
         with:
-          host: ${{secret.VPS_HOST}}
-          username: ${{secret.VPS_USER}}
-          key: ${{secret.VPS_KEY}}
+          host: ${{secrets.VPS_HOST}}
+          username: ${{secrets.VPS_USER}}
+          key: ${{secrets.VPS_KEY}}
           script: |
             cd /opt/profile
             docker compose pull

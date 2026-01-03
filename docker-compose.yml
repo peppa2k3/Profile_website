@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  client:
+    image: peppa2k3/profile_website:1.0
+    container_name: client
+    ports:
+      - "8080:80"

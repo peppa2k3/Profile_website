@@ -5,7 +5,7 @@ on:
     branches: ["develop"]
 jobs:
   build-and-deploy:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -23,7 +23,7 @@ jobs:
         uses: appleboy/ssh-action@v1
         with:
           host: ${{secrets.VPS_HOST}}
-          username: ${{secrets.VPS_USER}}
+          username: ${{secrets.VPS_USER}}z
           key: ${{secrets.VPS_KEY}}
           script: |
             cd /opt/profile

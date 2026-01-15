@@ -1,39 +1,22 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import avatar from "./assets/debungnha.png";
-import "./App.css";
+import React from "react";
+import Info from "./components/Info";
+import Projects from "./components/Projects";
+import CV from "./components/CV";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div className="main">
-        <div className="header">
-          <h1>HAI DANG</h1>
-          <p>
-            My name is Dang Ngoc Hai , I was born 2001. Currently I am a staff
-            at xxx xxxx VN
-          </p>
-        </div>
-        <div className="content">
-          {" "}
-          <a href="./" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://dangngochai.io.vn" target="_blank">
-            <img src={avatar} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <div className="footer">
-          {" "}
-          <p className="read-the-docs">
-            Click on the Vite and React logos to learn more
-          </p>
-        </div>
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+      {/* Container chính để giới hạn chiều rộng trên desktop */}
+      <div className="max-w-4xl mx-auto px-4 py-10 space-y-12">
+        <Info />
+        <Projects />
+        <CV />
+
+        <footer className="text-center text-slate-400 py-10">
+          © 2026 Designed with HaiDang
+        </footer>
       </div>
-    </>
+    </div>
   );
 }
 

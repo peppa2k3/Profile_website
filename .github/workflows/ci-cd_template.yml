@@ -21,9 +21,9 @@ jobs:
       - name: Set version
         run: |
           echo "VERSION=dev-${GITHUB_SHA::7}" >> $GITHUB_ENV
-      - name: build & push client
+      - name: build & push frontend
         run: |
-          docker build --build-arg VITE_API_URL=${{ secrets.VITE_API_URL }} -t ${{env.DOCKER_HUB_REPO}}${{env.IMAGE_FE_NAME}}:${{env.VERSION}} ./client
+          docker build --build-arg VITE_API_URL=${{ secrets.VITE_API_URL }} -t ${{env.DOCKER_HUB_REPO}}${{env.IMAGE_FE_NAME}}:${{env.VERSION}} ./frontend
           docker push ${{env.DOCKER_HUB_REPO}}${{env.IMAGE_FE_NAME}}:${{env.VERSION}}
       - name: build & push backend
         run: |

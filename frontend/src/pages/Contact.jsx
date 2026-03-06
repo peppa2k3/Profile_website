@@ -10,6 +10,7 @@ import {
   Users, // Teams
   Phone, // Zalo alternative
   Globe, // WeChat fallback
+  MapPin,
 } from "lucide-react";
 import { userAPI, contactAPI } from "../services/api";
 

@@ -11,6 +11,8 @@ import {
   Phone, // Zalo alternative
   Globe, // WeChat fallback
   MapPin,
+  CheckCircle,
+  AlertCircle,
 } from "lucide-react";
 import { userAPI, contactAPI } from "../services/api";
 
